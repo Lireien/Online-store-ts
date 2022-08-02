@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta crset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musical Instrument store</title>
+    <meta name="description" content="Music live up here" />
+    <meta name="author" content="Anastasiya Vel'yaninova" />
+    <link rel="stylesheet" href="global.css">
+    <link rel="icon" stabs="512x512" href="" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <nav class="navigation">
+          <a class="header__link" href="#">
+            <img class="header__icon-main" src="images/viollin.png" alt="Viollin">
+            <span class="header__link-span">MusicDwelling</span></a>
+        </nav>
+
+        <div class="search__container">
+          <div class="search-field">
+            <input class="search" type="search" placeholder="Поиск в MusicDwelling" autocomplete="off" autofocus>
+            <div class="search-reset"></div>
+          </div>
+          <div class="cart">
+            <p class="cart__goods">0</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="store-container">
+        <div class="store">
+
+          <div class="store-options">
+            <div class="store__sort">
+              <p class="store-sort__text">Сортировка</p>
+              <select class="store-sort__select" name="store-sort__select" id="store-sort__select">
+                <option class="store-sort__option" value="name-ascending" selected>Название (A -> Z)</option>
+                <option class="store-sort__option" value="name-descending">Название (Z -> A)</option>
+                <option class="store-sort__option" value="price-ascending">Цена (сначала дешёвые)</option>
+                <option class="store-sort__option" value="price-descending">Цена (сначала дорогие)</option>
+              </select>
+            </div>
+
+            <div class="store-controls">
+              <p class="store-options__text">Тип инструмента</p>
+              <div class="store-controls__type-list">
+                <div class="store-controls__select">
+                  <input class="store-checkbox" type="checkbox" name="controls" value="гитары" id="guitar" checked>
+                  <label for="guitar" class="store-controls__option">
+                    <p class="store-controls__type">Гитары</p>
+                  </label>
+                </div>
+
+                <div class="store-controls__select">
+                  <input class="store-checkbox" type="checkbox" name="controls" value="смычковые" id="bowed">
+                  <label for="bowed" class="store-controls__option">
+                    <p class="store-controls__type">Смычковые</p>
+                  </label>
+                </div>
+
+                <div class="store-controls__select">
+                  <input class="store-checkbox" type="checkbox" name="controls" value="клавишные" id="keyboard">
+                  <label for="keyboard" class="store-controls__option">
+                    <p class="store-controls__type">Клавишные</p>
+                </div>
+
+                <div class="store-controls__select">
+                  <input class="store-checkbox" type="checkbox" name="controls" value="ударные" id="percussion">
+                  <label for="percussion" class="store-controls__option">
+                    <p class="store-controls__type">Ударные</p>
+                  </label>
+                </div>
+
+                <div class="store-controls__select">
+                  <input class="store-checkbox" type="checkbox" name="controls" value="духовые" id="wind">
+                  <label for="wind" class="store-controls__option">
+                    <p class="store-controls__type">Духовые</p>
+                  </label>
+                </div>
+              </div>
+              <div class="store-price">
+                <p class="store-options__text">Цена, byn</p>
+                <div class="store-price__slider"></div>
+                <div class="store-price__labels slider__labels">
+                  <input class="store-price__labels-low" type="number" name="price-low" id="price-low" size="6" value=""
+                    step="1" placeholder="103" min="103" max="145700">
+                  <input class="store-price__labels-high" type="number" name="price-high" id="price-high" size="6" value=""
+                    step="1" placeholder="145700" min="103" max="145700">
+                </div>
+              </div>
+
+              <div class="store-year">
+                <p class="store-options__text">Год выхода на рынок</p>
+                <div class="store-year__slider"></div>
+                <div class="store-year__labels slider__labels">
+                  <input class="store-year__labels-low" type="number" name="year-earlier" id="year-earlier" size="6" value=""
+                    step="1" placeholder="1896" min="1896" max="2020">
+                  <input class="store-year__labels-high" type="number" name="year-later" id="year-later" size="6" value=""
+                    step="1" placeholder="2020" min="1896" max="2020">
+                </div>
+              </div>
+
+              <div class="store-type">
+                <p class="store-options__text">Цвет</p>
+                <div class="store-type__list">
+
+                  <div class="store-controls__select">
+                    <input class="store-checkbox" type="checkbox" name="color" value="натуральный" id="natural">
+                    <label for="natural" class="store-controls__option">
+                      Натуральный
+                    </label>
+                  </div>
+
+                  <div class="store-controls__select">
+                    <input class="store-checkbox" type="checkbox" name="color" value="чёрный" id="black">
+                    <label for="black" class="store-controls__option">
+                      Чёрный
+                    </label>
+                  </div>
+
+                  <div class="store-controls__select">
+                    <input class="store-checkbox" type="checkbox" name="color" value="белый" id="white">
+                    <label for="white" class="store-controls__option">
+                      Белый
+                    </label>
+                  </div>
+
+                  <div class="store-controls__select">
+                    <input class="store-checkbox" type="checkbox" name="color" value="другое" id="other">
+                    <label for="other" class="store-controls__option">
+                      Другое
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="store-available">
+                <input class="store-checkbox available-btn" id="available" type="checkbox" name="available" value="on">
+                <label for="available" class="store-options__text">Есть в наличии</label>
+              </div>
+
+              <button class="store-button__reset">Сбросить</button>
+
+            </div>
+            </div>
+
+
+
+          <footer class="footer">
+            <div class="footer__container">
+              <div class="footer__text">
+                <span class="data-span">&#169;</span>
+                <span class="data-span">2022</span>
+                <a href="https://github.com/Lireien" class="link footer-link">github</a>
+              </div>
+              <a href="https://rs.school/js/" class="link footer-link"><img class="footer-img" src="images/svg/rs_school_js.svg" alt="RSschool-logo"></a>
+            </div>
+          </footer>
+        </div>
+        <div class="store-goods__container">
+
+        </div>
+      </div>
+    </main>
+    <div class="mask__layout">
+      <div class="cart__popup">
+        <div class="cart__popup-close">
+          <img src="images/svg/Vector.svg" alt="close">
+        </div>
+        <div class="cart__popup__text">Извините, все слоты заполнены</div>
+      </div>
+    </div>
+
+    <template class="store-card__template">
+      <div class="store-card">
+        <img class="store-card__image" src="#" alt="Goods picture">
+        <h3 class="store-card__item-name"></h3>
+
+        <div class="store-card__price">
+            <h4 class="store-card__price-text"></h4>
+            <span class="store-card__currency">byn</span>
+
+        </div>
+
+        <div class="store-card__year">
+            <p class="store-card__year-text">На рынке с</p>
+            <span class="store-card__year-date"></span>
+        </div>
+
+        <div class="store-card__actions">
+          <p class="store-card__available"></p>
+          <button class="store-card__cart">В корзину</button>
+        </div>
+      </div>
+    </template>
+
+  </body>
+</html>

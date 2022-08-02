@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "outDir": "./dist/",
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+  },
+  "exclude": [
+    "../../node_modules",
+    "../../typings"
+]
+}
